@@ -86,6 +86,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate {
         else{
             cityLabel.text = "Weather Unavailable"
         }
+        updateUIWithWeatherData()
     }
     
     
@@ -94,8 +95,11 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate {
     
     
     //Write the updateUIWithWeatherData method here:
-    
-    
+    func updateUIWithWeatherData(){
+        cityLabel.text = weatherDataModel.city
+        temperatureLabel.text = String(weatherDataModel.temperature)
+        weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
+    }
     
     
     
