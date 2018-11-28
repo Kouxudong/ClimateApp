@@ -86,7 +86,9 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate {
         else{
             cityLabel.text = "Weather Unavailable"
         }
+        
         updateUIWithWeatherData()
+        
     }
     
     
@@ -106,7 +108,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate {
     
     //MARK: - Location Manager Delegate Methods
     /***************************************************************/
-    
+   
     
     //1.Write the didUpdateLocations method here:
     //CLLocation's last element is the most accurate one
